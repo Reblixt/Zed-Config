@@ -22,6 +22,7 @@
   "ui_font_size": 18,
   "buffer_font_size": 17,
   "buffer_font_family": "FiraCode Nerd Font",
+  "buffer_font_weight": 450,
   "relative_line_numbers": true,
   "scrollbar": {
     "show": "never"
@@ -30,6 +31,7 @@
     "custom": 1.4
   },
   "cursor_blink": false,
+
   "theme": {
     "mode": "system",
     "light": "Catppuccin Mocha (Blur)",
@@ -38,9 +40,42 @@
   "terminal": {
     "font_family": "FiraCode Nerd Font",
     "font_size": 16
+  },
+
+  // Indent settings
+  // "tab_size": 8,
+
+  "project_panel": {
+    // "auto_reveal_entries": false,
+    "folder_icons": true,
+    "file_icons": true
+    // "indent_size": 40
   }
-  // "terminal": {
-  //   "font_family": "FiraCode Nerd Font"
-  // },
-  // "ui_font_family": "FiraCode Nerd Font"
+
+  // "languages": {
+  //   "Solidity": {
+  //     "language_servers": ["nomicfoundation-solidity-language-server"],
+  //     "inlay_hints": {
+  //       "enabled": true
+  //     },
+
+  //     "tab_size": 2,
+  //     "formatter": "prettier",
+  //     "format_on_save": {
+  //       "enabled": true
+  //     },
+
+  //     "always_treat_brackets_as_autoclosed": true,
+  //     "use_autoclose": true,
+  //     "use_auto_surround": true
+  //   }
+  // }
+
+  // "lsp": {
+  //   "nomicfoundation-solidity-language-server":{
+  //     "binary": {
+
+  //     }
+  //   }
+  // }
 }
