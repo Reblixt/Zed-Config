@@ -53,7 +53,6 @@
       "space o": "tab_switcher::Toggle",
       "space e": "workspace::ToggleLeftDock",
       "space p": "outline::Toggle",
-      "space a c": "assistant::ToggleFocus",
       // + Buffers
       // Switch between buffers
       "shift-h": "pane::ActivatePrevItem",
@@ -64,7 +63,14 @@
       //  Panes
       "space |": "pane::SplitLeft",
       "space -": "pane::SplitDown",
-      "space w d": "pane::CloseActiveItem"
+      "space w d": "pane::CloseActiveItem",
+      // AI
+      "space a a": "assistant::InlineAssist",
+      "space a q": "assistant::QuoteSelection",
+      "space a c": "assistant::ToggleFocus",
+      "space a p": "assistant::InsertActivePrompt",
+      "space q": "workspace::ToggleRightDock"
+      // "ctrl-s": "assistant::ConfirmCommand"
     }
   },
   {
@@ -89,7 +95,8 @@
       "d": "project_panel::Delete",
       "r": "project_panel::Rename",
       "space e": "workspace::ToggleLeftDock",
-      "q": "workspace::ToggleRightDock"
+      "space q": "workspace::ToggleRightDock",
+      "ctrl-s": "assistant::Assist"
     }
   }
 ]
