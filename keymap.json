@@ -51,7 +51,7 @@
 
       "space x x": "diagnostics::Deploy",
       "space o": "tab_switcher::Toggle",
-      "space e": "workspace::ToggleLeftDock",
+      "ctrl-n": "workspace::ToggleLeftDock",
       "space p": "outline::Toggle",
       // + Buffers
       // Switch between buffers
@@ -94,9 +94,9 @@
       "a": "project_panel::NewFile",
       "d": "project_panel::Delete",
       "r": "project_panel::Rename",
-      "space e": "workspace::ToggleLeftDock",
-      "space q": "workspace::ToggleRightDock",
-      "ctrl-s": "assistant::Assist"
+      "ctrl-n": "workspace::ToggleLeftDock",
+      "space q": "workspace::ToggleRightDock"
+      // "ctrl-s: "assistant::Assist"
     }
   }
 ]

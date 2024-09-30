@@ -8,9 +8,13 @@
 // command palette
 {
   "assistant": {
+    // "default_model": {
+    //   "provider": "copilot_chat",
+    //   "model": "gpt-4o"
+    // },
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "provider": "ollama",
+      "model": "deepseek-coder-v2:16b"
     },
     "version": "2"
   },
@@ -50,7 +54,7 @@
     "folder_icons": true,
     "file_icons": true
     // "indent_size": 40
-  }
+  },
 
   // "languages": {
   //   "Solidity": {
@@ -78,4 +82,10 @@
   //     }
   //   }
   // }
+  "languages": {
+    "Solidity": {
+      "tab_size": 5,
+      "formatter": "auto"
+    }
+  }
 }

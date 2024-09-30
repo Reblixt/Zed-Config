@@ -1,0 +1,54 @@
+{
+  // OpenZeppelin
+  "Ownable Openzeppelin": {
+    "prefix": "importOwnable",
+    "body": [
+      "import {Ownable} from \"@openzeppelin/contracts/access/Ownable.sol\";"
+    ],
+    "description": "Import Ownable contract from OpenZeppelin"
+  },
+
+  // Foundry
+
+  "MOCKERC20": {
+    "prefix": "importMockERC20",
+    "body": ["import {MockERC20} from \"forge-std/mocks/MockERC20.sol\";"],
+    "description": "Import MockERC20 contract from Foundry"
+  },
+
+  "MOCKERC721": {
+    "prefix": "importMockERC721",
+    "body": ["import {MockERC721} from \"forge-std/mocks/MockERC721.sol\";"],
+    "description": "Import MockERC721 contract from Foundry"
+  },
+
+  "Test": {
+    "prefix": "importTest",
+    "body": ["import {Test} from \"forge-std/Test.sol\";"],
+    "description": "Import Test contract from Foundry"
+  },
+
+  "Script": {
+    "prefix": "importScript",
+    "body": ["import {Script} from \"forge-std/Script.sol\";"],
+    "description": "Import Script contract from Foundry"
+  },
+
+  "log Bytes": {
+    "prefix": "logBytes",
+    "body": ["console.logBytes(\"$1\", $1);"],
+    "description": "Log bytes"
+  },
+
+  "log Bytes32": {
+    "prefix": "logBytes32",
+    "body": ["console.logBytes32(\"$1\", $1);"],
+    "description": "Log bytes"
+  },
+
+  "log to console": {
+    "prefix": "log",
+    "body": ["console.log(\"$1\", $1);"],
+    "description": "Log to console"
+  }
+}
