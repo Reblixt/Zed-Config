@@ -9,8 +9,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-t": "terminal_panel::ToggleFocus",
-      "space |": "workspace::ToggleRightDock"
+      "ctrl-t": "terminal_panel::ToggleFocus"
     }
   },
   {
@@ -22,12 +21,10 @@
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
-      "space space": "file_finder::Toggle",
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
-      "space g g": ["task::Spawn", { "task_name": "Lazygit" }]
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
       // "space g g": ["workspace::SendKeystrokes", "alt-shift-t enter"]
     }
   },
@@ -41,10 +38,14 @@
     "context": "VimControl && !menu",
     "bindings": {
       // This will work both in normal and visual mode
+      "space g g": ["task::Spawn", { "task_name": "Lazygit" }],
+      "space f f": "file_finder::Toggle",
       "shift-k": "editor::Hover",
+      // "space |": "workspace::ToggleRightDock",
       // LSP
       "space c a": "editor::ToggleCodeActions",
       "space c r": "editor::Rename",
+      "space c f": "editor::Format",
       "space v": "editor::GoToDefinitionSplit",
       "space g t": "editor::GoToTypeDefinition",
       "space s t": "pane::DeploySearch",

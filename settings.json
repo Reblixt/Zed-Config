@@ -14,7 +14,7 @@
     // },
     "default_model": {
       "provider": "ollama",
-      "model": "deepseek-coder-v2:16b"
+      "model": "deepseek-coder-v2:latest"
     },
     "version": "2"
   },
@@ -38,7 +38,7 @@
 
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Mocha (Blur)",
+    "light": "Catppuccin Mocha",
     "dark": "One Dark"
   },
   "terminal": {
@@ -74,6 +74,18 @@
   //     "use_auto_surround": true
   //   }
   // }
+
+  "lsp": {
+    "rust-analyzer": {
+      "procMacro": {
+        "ignored": [
+          // optional:
+          // "component",
+          "server"
+        ]
+      }
+    }
+  },
 
   // "lsp": {
   //   "nomicfoundation-solidity-language-server":{
