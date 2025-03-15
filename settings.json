@@ -7,14 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "icon_theme": "Zed (Default)",
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "assistant": {
     // "default_model": {
     //   "provider": "copilot_chat",
     //   "model": "gpt-4o"
     // },
     "default_model": {
-      "provider": "ollama",
-      "model": "deepseek-coder-v2:latest"
+      // "provider": "ollama",
+      // "model": "deepseek-coder-v2:latest"
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-latest"
     },
     "version": "2"
   },
@@ -38,8 +44,8 @@
 
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Mocha",
-    "dark": "One Dark"
+    "light": "Kanagawa",
+    "dark": "Kanagawa Wave"
   },
   "terminal": {
     "font_family": "FiraCode Nerd Font",
@@ -55,49 +61,34 @@
     "file_icons": true
     // "indent_size": 40
   },
-
-  // "languages": {
-  //   "Solidity": {
-  //     "language_servers": ["nomicfoundation-solidity-language-server"],
-  //     "inlay_hints": {
-  //       "enabled": true
-  //     },
-
-  //     "tab_size": 2,
-  //     "formatter": "prettier",
-  //     "format_on_save": {
-  //       "enabled": true
-  //     },
-
-  //     "always_treat_brackets_as_autoclosed": true,
-  //     "use_autoclose": true,
-  //     "use_auto_surround": true
-  //   }
-  // }
-
-  "lsp": {
-    "rust-analyzer": {
-      "procMacro": {
-        "ignored": [
-          // optional:
-          // "component",
-          "server"
-        ]
+  "languages": {
+    "Move": {
+      "formatter": {
+        "external": {
+          "command": "prettier-move",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
       }
     }
   },
 
-  // "lsp": {
-  //   "nomicfoundation-solidity-language-server":{
-  //     "binary": {
-
-  //     }
-  //   }
-  // }
-  "languages": {
-    "Solidity": {
-      "tab_size": 5,
-      "formatter": "auto"
+  "experimental.theme_overrides": {
+    "syntax": {
+      "include.member": { "color": "#89b4fa" },
+      "constructor.name": { "color": "#FFA066" },
+      "namespace.module.name": { "color": "#b4befe" },
+      "macro.call": { "color": "#C34043" },
+      "function.call": { "color": "#7E9CD8" },
+      "variable.special": { "color": "#E46876" },
+      "variable.parameter": { "color": "#E46876" },
+      "property": { "color": "#E46876" },
+      "variable": { "color": "#DCD7BA" },
+      "type.definition.struct": { "color": "#FFA066" },
+      "type.name": { "color": "#FFA066" },
+      "type": { "color": "#F4BB5C" },
+      "number": { "color": "#FFA066" },
+      "punctuation.special": { "color": "#FFA066" },
+      "punctuation.bracket": { "color": "#957FB8" }
     }
   }
 }

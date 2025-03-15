@@ -21,29 +21,24 @@
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
-      "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight",
-      "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
-
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
       // "space g g": ["workspace::SendKeystrokes", "alt-shift-t enter"]
     }
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
-      "ctrl-f": "editor::AcceptEditPrediction"
+      "ctrl-f": "editor::AcceptInlineCompletion"
     }
   },
   {
     "context": "VimControl && !menu",
     "bindings": {
       // This will work both in normal and visual mode
-      // "space g g": ["task::Spawn", { "task_name": "Lazygit" }],
-      "space g g": [
-        "task::Spawn",
-        { "task_name": "lazygit", "target": "center" }
-      ],
+      "space g g": ["task::Spawn", { "task_name": "Lazygit" }],
       "space f f": "file_finder::Toggle",
       "shift-k": "editor::Hover",
       // "space |": "workspace::ToggleRightDock",
@@ -61,7 +56,7 @@
       "space p": "outline::Toggle",
       // + Buffers
       // Switch between buffers
-      "shift-h": "pane::ActivatePreviousItem",
+      "shift-h": "pane::ActivatePrevItem",
       "shift-l": "pane::ActivateNextItem",
       // Close buffer
       "space b d": "pane::CloseActiveItem",
@@ -71,11 +66,11 @@
       "space -": "pane::SplitDown",
       "space w d": "pane::CloseActiveItem",
       // AI
-      "space a i": "assistant::InlineAssist",
-      "space a a": "assistant::QuoteSelection",
-      // "space a t": "assistant::ToggleFocus",
+      "space a a": "assistant::InlineAssist",
+      "space a q": "assistant::QuoteSelection",
+      "space a c": "assistant::ToggleFocus",
       "space a p": "assistant::InsertActivePrompt",
-      "space a t": "workspace::ToggleRightDock"
+      "space q": "workspace::ToggleRightDock"
       // "ctrl-s": "assistant::ConfirmCommand"
     }
   },
@@ -91,9 +86,7 @@
     "bindings": {
       "ctrl-t": "workspace::ToggleBottomDock",
       "ctrl-a": "workspace::NewTerminal",
-      "ctrl-d": "pane::CloseActiveItem",
-      "ctrl-h": "pane::ActivatePreviousItem",
-      "ctrl-l": "pane::ActivateNextItem"
+      "ctrl-d": "pane::CloseActiveItem"
     }
   },
   {
@@ -103,7 +96,7 @@
       "d": "project_panel::Delete",
       "r": "project_panel::Rename",
       "ctrl-n": "workspace::ToggleLeftDock",
-      "space a t": "workspace::ToggleRightDock"
+      "space q": "workspace::ToggleRightDock"
       // "ctrl-s: "assistant::Assist"
     }
   }
