@@ -11,6 +11,16 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
+
+  "active_pane_modifiers": {
+    "border_size": 0.0
+  },
+
+  "outline_panel": {
+    // "dock": "right"
+    // "default_width": 100
+  },
+
   "assistant": {
     // "default_model": {
     //   "provider": "copilot_chat",
@@ -30,17 +40,19 @@
   },
   "vim_mode": true,
   "ui_font_size": 18,
-  "buffer_font_size": 17,
+  "buffer_font_size": 18,
   "buffer_font_family": "FiraCode Nerd Font",
   "buffer_font_weight": 450,
   "relative_line_numbers": true,
   "scrollbar": {
     "show": "never"
+    // "cursors": false
   },
   "buffer_line_height": {
     "custom": 1.4
   },
   "cursor_blink": false,
+  "cursor_shape": "bar",
 
   "theme": {
     "mode": "system",
@@ -58,7 +70,8 @@
   "project_panel": {
     // "auto_reveal_entries": false,
     "folder_icons": true,
-    "file_icons": true
+    "file_icons": true,
+    "default_width": 430
     // "indent_size": 40
   },
   "languages": {
@@ -73,6 +86,18 @@
   },
 
   "experimental.theme_overrides": {
+    "info.background": "#315fa8",
+    "modified.background": "#315fa8",
+    "deleted.background": "#315fa8",
+    "error.background": "#030000",
+
+    // Hover text color when there is a warning
+    "warning.border": "#c27e0a",
+    "warning.background": "#8a602d",
+
+    // changes the background color of the bracket highlight when auto complete
+    "editor.document_highlight.bracket_background": "#2a304f",
+
     "syntax": {
       "include.member": { "color": "#89b4fa" },
       "constructor.name": { "color": "#FFA066" },
@@ -90,5 +115,6 @@
       "punctuation.special": { "color": "#FFA066" },
       "punctuation.bracket": { "color": "#957FB8" }
     }
-  }
+  },
+  "vertical_scroll_margin": 15
 }
